@@ -1,0 +1,265 @@
+
+
+.center
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color: #666666;
+	margin-left:auto;
+	margin-right:auto;
+	width:70%;
+	line-height: 3em;
+	font-size: 12px;
+}
+
+.topborderline
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color: #666666;
+	margin-top: -7px;
+	margin-left: -8px;
+	width: 105%;
+	height: 3px;
+	background-image:url("../images/website/header/header-background.png");
+}
+
+.headerContainer
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color: #666666;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+.topnavbar
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color: #666666;
+	background:url("../images/website/navbar-topmenu/navbar-background.png")repeat scroll 0 0 transparent;
+	margin-left: -8px;
+	margin-top: 110px;
+	width: 105%;
+	height: 58px;
+}
+
+
+.topnavbar-width
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color: #666666;
+	width: 1000px;
+	margin:0 auto;
+	height: 58px;
+}
+.topnavbar-button
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color: #666666;
+	margin-top: 9px;
+	height: 40px;
+	width: 152px;
+	background:url("../images/website/navbar-topmenu/navbar-menu-button-whole.png") no-repeat scroll 0 0 transparent;
+	position: absolute;
+}
+.topnavbar .topnavbar-width ul {list-style-type:none;color: #666666;margin: 0 ; padding: 5px 0}
+.topnavbar .topnavbar-width ul li
+{
+	background: url("../images/website/navbar-topmenu/navbar-menu-button-whole.png") no-repeat scroll 0 0 transparent;
+    color: #666666;
+    font-family: Arial,Helvetica,sans-serif;
+    height: 40px;
+    margin-top: 4px;
+    float: left;
+    width: 152px;
+    padding-top: 8px;
+    text-align: center;
+}
+.topnavbar .topnavbar-width ul li a { text-decoration: none;color: #666666;}
+
+.sidebar-text
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color: #666666;
+	margin-left: 15px;
+	width: 249px;
+	font-size: 15px;
+}
+
+.issues {
+	font-family:Arial,Helvetica,sans-serif;
+	color: #666666;
+	width: 158px;
+	height: 34px;
+
+}
+
+.issueline
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color: #666666;
+	width: 300px;
+	height: 34px;
+}
+.memberprofileContainer {font-family:Arial,Helvetica,sans-serif;color: #666666;margin-left: 70%;margin-top: -2px;height: 10px;position: absolute;}
+.memberprofileContainer .profileLeft {
+	background: url("../images/website/header/profile-login-tab-left.png")no-repeat scroll 0 0 transparent;
+	height: 33px;width: 12px;
+}
+.memberprofileContainer .profileCenter {
+	background: url("../images/website/header/profile-login-tab-middle.png")repeat scroll 0 0 transparent;
+	height: 33px;
+	vertical-align:top; color: yellow; font-size: 12px;
+	width: 150px;
+	margin-top: -33px;margin-left: 12px;text-align: center;
+}
+.memberprofileContainer .profileRight {
+	background: url("../images/website/header/profile-login-tab-right.png")no-repeat scroll 0 0 transparent;
+	height: 33px;width: 12px;margin-top: -33px;margin-left: 162px
+}
+.memberprofileContainer .profileCenter .halign{ color: #ffffff;font-size: 12px}
+.memberprofileContainer .profileCenter .halignPro {padding-left: 15px}
+.memberprofileContainer .profileCenter .halignPro ul {margin: 0 ; padding: 0;list-style-type: none;}
+.memberprofileContainer .profileCenter .halignPro ul li {float: left;width: 60px;}
+.memberprofileContainer .profileCenter .halignPro ul li a {color: #ffffff}
+
+#wrap {
+    max-width: 1274px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #fff;
+}
+#wrap form#login-form {
+  position: relative;
+  z-index: 500;
+  margin: 20px auto;
+  max-width: 520px;
+  padding: 1em;
+  background: #f4f4f4;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f4f4f4 0%, #efefef 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #efefef));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f4f4f4 0%, #efefef 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f4f4f4 0%, #efefef 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f4f4f4 0%, #efefef 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f4f4f4 0%, #efefef 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#efefef',GradientType=0 );
+  /* IE6-9 */
+  -moz-border-radius: .75em;
+  -webkit-border-radius: .75em;
+  border-radius: .75em;
+  border: 1px solid #d8d8d8;
+  -webkit-box-shadow: inset 0px 0px 0px 1px white;
+  -moz-box-shadow: inset 0px 0px 0px 1px white;
+  box-shadow: inset 0px 0px 0px 1px white;
+}
+#wrap form#login-form:after {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 520px;
+    height: 26px;
+    text-align: center;
+    content: " ";
+    background: url("../images/bottom-box-shadow.png") no-repeat top center transparent;
+    z-index: 400;
+    bottom: -26px;
+    left: 0px;
+}
+#wrap form#login-form #login-container {
+    background: url("../images/login-screen/login-logo.png") no-repeat 50% 20px transparent;
+    padding-top: 160px;
+}
+#wrap form#login-form #login-container h1 {
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: .5em;
+}
+#wrap form#login-form #login-container .form-row {
+    text-align: center;
+    line-height: 1em;
+    margin-bottom: 1em;
+}
+#wrap form#login-form #login-container .form-row input[type="text"], #wrap form#login-form #login-container .form-row input[type="password"] {
+    width: 15em;
+    text-align: left;
+    font-weight: bold;
+    color: #989898;
+    padding: 8px 6px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #bababa;
+    transition: box-shadow 0.5s, border 0.5s, background 0.5s;
+    -moz-transition: -moz-box-shadow 0.5s, border 0.5s, background 0.5s;
+    -webkit-transition: -webkit-box-shadow 0.5s, border 0.5s, background 0.5s;
+    -o-transition: -o-box-shadow 0.5s, border 0.5s, background 0.5s;
+}
+#wrap form#login-form #login-container .form-row input[type="text"]:focus, #wrap form#login-form #login-container .form-row input[type="password"]:focus {
+ 	outline: none;
+ 	border-color: #49a9de;
+    color: #49a9de;
+    -moz-box-shadow: 0px 0px 5px 0 #49a9de;
+    -webkit-box-shadow: 0px 0px 5px 0 #49a9de;
+    box-shadow: 0px 0px 5px 0 #49a9de;
+}
+#wrap form#login-form #login-container .form-row #submit {
+    -moz-box-shadow: inset 0px 1px 0px 0px #cae3fc;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #cae3fc;
+    box-shadow: inset 0px 1px 0px 0px #cae3fc;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #4197ee));
+    background: -moz-linear-gradient(center top, #79bbff 5%, #4197ee 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#4197ee');
+    background-color: #79bbff;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #469df5;
+    display: inline-block;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 12px 6px 36px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #287ace;
+    background-image: url("../images/lock-icon.png");
+    background-repeat: no-repeat;
+    background-position: 12px 50%;
+}
+#wrap form#login-form #login-container .form-row #submit:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4197ee), color-stop(1, #79bbff));
+    background: -moz-linear-gradient(center top, #4197ee 5%, #79bbff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4197ee', endColorstr='#79bbff');
+    background-color: #4197ee;
+    background-image: url("../images/lock-icon.png");
+    background-repeat: no-repeat;
+    background-position: 12px 50%;
+}
+#wrap form#login-form #login-container .form-row #submit:active {
+    position: relative;
+    top: 1px;
+    background-image: url("../images/lock-icon.png");
+    background-repeat: no-repeat;
+    background-position: 12px 50%;
+}
+.footerContainer
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color: #57585b;
+	margin-left: -10px;
+	width: 120%;
+	background: #f1f1f1;
+	bottom: 0;
+	position: absolute;
+	height: 20px;
+}

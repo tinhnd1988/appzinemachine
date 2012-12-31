@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+
+	<!-- blueprint CSS framework -->
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+    
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.6.2.min.js" type="text/javascript"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.ui.core.js" type="text/javascript"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.ui.widget.js" type="text/javascript"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.validate.js" type="text/javascript"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js" type="text/javascript"></script>
+	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+<script language="javascript">
+function FloatTopDiv() 
+    { 
+        startLX = ((document.body.clientWidth -MainContentW)/2)-LeftBannerW-LeftAdjust , startLY = TopAdjust+80; 
+        startRX = ((document.body.clientWidth -MainContentW)/2)+MainContentW+RightAdjust , startRY = TopAdjust+80; 
+        var d = document; 
+        function ml(id) 
+        { 
+            var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; 
+            el.sP=function(x,y){this.style.left=x + 'px';this.style.top=y + 'px';}; 
+            el.x = startRX; 
+            el.y = startRY; 
+            return el; 
+        } 
+        function m2(id) 
+        { 
+            var e2=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id]; 
+            e2.sP=function(x,y){this.style.left=x + 'px';this.style.top=y + 'px';}; 
+            e2.x = startLX; 
+            e2.y = startLY; 
+            return e2; 
+        } 
+        window.stayTopLeft=function() 
+        { 
+            if (document.documentElement && document.documentElement.scrollTop) 
+                var pY =  document.documentElement.scrollTop; 
+            else if (document.body) 
+                var pY =  document.body.scrollTop; 
+            if (document.body.scrollTop > 30){startLY = 3;startRY = 3;} else {startLY = TopAdjust;startRY = TopAdjust;}; 
+            ftlObj.y += (pY+startRY-ftlObj.y)/16; 
+            ftlObj.sP(ftlObj.x, ftlObj.y); 
+            ftlObj2.y += (pY+startLY-ftlObj2.y)/16; 
+            ftlObj2.sP(ftlObj2.x, ftlObj2.y); 
+            setTimeout("stayTopLeft()", 1); 
+        } 
+        ftlObj = ml("divAdRight"); 
+        //stayTopLeft(); 
+        ftlObj2 = m2("divAdLeft"); 
+        stayTopLeft(); 
+    } 
+    function ShowAdDiv() 
+    { 
+        var objAdDivRight = document.getElementById("divAdRight"); 
+        var objAdDivLeft = document.getElementById("divAdLeft");        
+        if (document.body.clientWidth < 1000) 
+        { 
+            objAdDivRight.style.display = "none"; 
+            objAdDivLeft.style.display = "none"; 
+        } 
+        else 
+        { 
+            objAdDivRight.style.display = "block"; 
+            objAdDivLeft.style.display = "block"; 
+            FloatTopDiv(); 
+        } 
+    }
+document.write("<script type='text/javascript' language='javascript'>MainContentW = 1250;LeftBannerW = 125;RightBannerW = 125;LeftAdjust = -130;RightAdjust = -110;TopAdjust = 10;ShowAdDiv();window.onresize=ShowAdDiv;;<\/script>"); 
+$(document).ready(function(){
+    ShowAdDiv();
+
+});
+ </script>	
+</head>
+
+<body>
+<div id="divAdLeft" style="left:0pt; width:100px; position:absolute; top:100px"><img src="http://tamlongvangvn.com//uploads/banner/83573af77864225c49899d345c649454.jpg" /></div> 
+<div id="divAdRight" style="left:1153px; width:100px; position:absolute; top:100px"><img src="http://tamlongvangvn.com//uploads/banner/83573af77864225c49899d345c649454.jpg" /></div>
+<div class="container" id="page">
+
+	<div id="header">
+		<div id="logo"><?php //echo CHtml::encode(Yii::app()->name); ?> 
+		<img height="80" width="500" src="/images/banner.png"></images>
+		</div>
+	</div><!-- header -->
+
+	<div id="mainmenu">
+		<?php $this->widget('zii.widgets.CMenu',array(
+			'items'=>array(
+				array('label'=>'Trang Chủ', 'url'=>array('post/index')),
+				array('label'=>'Giới Thiệu', 'url'=>array('site/page', 'view'=>'about')),
+				array('label'=>'Liên Hệ', 'url'=>array('site/contact')),
+				array('label'=>'Bai viet', 'url'=>array('post/index')),
+				array('label'=>'Đăng Nhập', 'url'=>array('site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Đăng Xuất ('.Yii::app()->user->name.')', 'url'=>array('site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Đăng Kí', 'url'=>array('users/register')),
+			),
+		)); ?>
+	</div><!-- mainmenu -->
+
+	<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+		'links'=>$this->breadcrumbs,
+	)); ?><!-- breadcrumbs -->
+
+	<?php echo $content; ?>
+
+	<div id="footer">
+		Copyright &copy; <?php echo date('d/m/Y'); ?> by My Company.<br/>
+		All Rights Reserved.<br/>
+		<?php echo Yii::powered(); ?>
+	</div><!-- footer -->
+
+</div><!-- page -->
+
+</body>
+
+</html>

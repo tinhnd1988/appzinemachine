@@ -1,0 +1,83 @@
+<script>
+  $(document).ready(function(){
+    $("#users-form").validate();
+
+  });
+</script>
+
+<h2 align='center'>Đăng Ký Thành Viên</h2>
+<div class="form">
+
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'users-form',
+	'clientOptions'=>array(
+		'validateOnSubmit'=>true,
+		))
+); ?>
+
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	<?php //echo $form->errorSummary($model); ?>
+	<div class="row">
+		<?php //echo $form->labelEx($model,'role'); ?>
+		<?php echo $form->hiddenField($model,'role',array('value'=>'User','size'=>45,'maxlength'=>45)); ?>
+		<?php //echo $form->error($model,'role'); ?>
+	</div>
+	<div class="floats clearfix">
+	<p>
+		<?php echo $form->labelEx($model,'FirstName'."<span class='required'>*</span>"); ?>
+		<?php echo $form->textField($model,'firstname',array('size'=>20,'maxlength'=>32,'class'=>'required')); ?>
+		<?php echo $form->error($model,'firstname'); ?>
+	</p>
+	<p>
+		<?php echo $form->labelEx($model,'LastName'."<span class='required'>*</span>"); ?>
+		<?php echo $form->textField($model,'lastname',array('size'=>20,'maxlength'=>30,'class'=>'required')); ?>
+		<?php echo $form->error($model,'lastname'); ?>
+	</p></div>
+	<div class="row">
+        
+		<?php echo $form->labelEx($model,'Giới Tính'); ?>
+		<!--<?php echo $form->textField($model,'active'); ?>
+		<?php echo $form->error($model,'active'); ?> -->
+        <div class="compactRadioGroup">
+            <?php
+                echo $form->radioButtonList($model, 'gender',
+                    array(  1 => 'Nam',
+                            0 => 'Nữ',
+                            ) );
+            ?>
+            </div>
+            <?php echo $form->error($model, 'gender'); ?>
+	</div>
+    <div class="row">
+		<?php echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->textField($model,'username',array('size'=>51,'maxlength'=>30)); ?>
+		<?php echo $form->error($model,'username'); ?>
+	</div>
+	
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'Password'."<span class='required'>*</span>"); ?>
+		<?php echo $form->passwordField($model,'password',array('size'=>20,'maxlength'=>30,'class'=>'required')); ?>
+		<?php //echo $form->error($model,'password'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'Confirm Password'."<span class='required'>*</span>"); ?>
+		<?php echo $form->passwordField($model,'confirm_password',array('size'=>20,'maxlength'=>30,'equalTo'=>'#Users_password')); ?>
+		<?php echo $form->error($model,'confirm_password'); ?>
+	</div>
+	<div class="row">
+		<?php echo $form->labelEx($model,'Email'."<span class='required'>*</span>"); ?>
+		<?php echo $form->textField($model,'email',array('size'=>25,'maxlength'=>30,'class'=>'required')); ?>
+		<?php //echo $form->error($model,'email'); ?>
+	</div>
+
+	<div style="margin-left: 225px; ">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Register' : 'Save'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+
+</div><!-- form -->
+</form>
